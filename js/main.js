@@ -10,7 +10,7 @@ let isNumber = function(n) {
 
 
 let newGame = function() {
-    let enteredNumber = Math.floor(Math.random() * 100);
+    let enteredNumber = (Math.floor(Math.random() * 100) + 1);
     console.log(enteredNumber);
     let getNumber = function() {
         let wantPlay = function(play) { 
@@ -28,7 +28,7 @@ let newGame = function() {
             alert('Может, в другой раз');
         }
         else if (!isNumber(userNumber) || (parseFloat(userNumber) > 100)){
-            desire = confirm('Введи число от 0 до 100!');
+            desire = confirm('Введи число от 1 до 100!');
             wantPlay(desire);
         }
          else if (userNumber == enteredNumber) {
@@ -47,4 +47,3 @@ let newGame = function() {
 };
 
 let game = newGame();
-game();
